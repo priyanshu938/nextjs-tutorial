@@ -115,6 +115,13 @@
   }
 }
 
+.home{
+    color: red;
+}
+.homeBg{
+    font-size: 50px;
+}
+
 @media (prefers-color-scheme: dark) {
   .card,
   .footer {
