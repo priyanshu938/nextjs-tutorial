@@ -1,20 +1,28 @@
-import React from 'react'
+import React from "react";
 import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <navbar>
-        <ul>
-          {
-            // use Link for routing
-          }
-          <Link href="/home">Home</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/about">About</Link>
-          <Link href="/blog">Blog</Link>
-        </ul>
-      </navbar>
-  )
-}
+    <navbar className="menu-bar">
+      <ul>
+        {
+          // use Link for routing
+        }
+        <Link href="/home">
+          <a>Home</a>
+        </Link>
+        <Link href="/contact">
+          <a>Contact</a>
+        </Link>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+        <Link href="/blog">
+          <a>Blog</a>
+        </Link>
+      </ul>
+    </navbar>
+  );
+};
 
-export default Navbar
+export default Navbar;
