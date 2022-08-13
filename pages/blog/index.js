@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Head from "next/head";
+import Link from "next/link";
 
 //For API call in Next.js use  getStaticProps()
 export const getStaticProps = async () => {
@@ -33,11 +34,13 @@ const index = ({ posts }) => {
       <Navbar />
       {
         //Using map to display posts
-        posts.slice(0,5).map((post) => {
+        posts.slice(0, 5).map((post) => {
           return (
             <div key={post.id} className="ssr-styles">
               <h3>{post.id}</h3>
-              <h2>{post.title}</h2>
+              <Link href={`/blog/${post.id}`}>
+                <h2>{post.title}</h2>
+              </Link>
             </div>
           );
         })
